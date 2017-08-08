@@ -9,7 +9,26 @@ h2 {
   color: white;
   font-style: italic;
   margin: 0px;
-  padding: 20px;
+  padding: 25px;
+}
+
+span {
+  float: right;
+}
+
+i {
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+section.active > h2 i {
+  transform: rotate(-135deg);
+}
+
+section.inactive > h2 i {
+  transform: rotate(45deg);
 }
 
 p {

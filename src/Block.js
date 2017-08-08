@@ -22,8 +22,8 @@ class Block extends Component {
   render() {
 
     return (
-      <section>
-        <h2 className={this.state.className} onClick={ this.toggle }>{this.props.heading}</h2>
+      <section className={this.state.className}>
+        <h2 className={this.state.className} onClick={ this.toggle }>{this.props.heading} <span><i></i></span></h2>
         <p className={this.state.className}> {this.props.content} </p>
       </section>
     )
