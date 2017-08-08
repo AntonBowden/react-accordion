@@ -17,7 +17,7 @@ class Accordion extends Component {
   constructor() {
     super();
     this.state = {
-      active: false
+      active: true
     };
     this.toggle = this.toggle.bind(this);
   }
@@ -32,18 +32,19 @@ class Accordion extends Component {
     const stateStyle = this.state.active ? styles.active : styles.inactive;
     return (
       <div className="Accordion">
-        <section>
-          <h2 onClick={ this.toggle }> {this.props.heading} </h2>
-          <p style={ stateStyle }> {this.props.content} </p>
-        </section>
+
+          {this.props.data.map((block, index) => (
+            <section key={index}>
+              <h2 onClick={ this.toggle }>{block.heading}</h2>
+              <p style={ stateStyle }> {block.content} </p>
+            </section>
+          ))}
+
       </div>
     );
   }
 }
 
-// Accordion.propTypes = {
-//   heading: React.propTypes.string.isRequired,
-//   content: React.propTypes.string.isRequired
-// }
+
 
 export default Accordion;
