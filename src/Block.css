@@ -1,0 +1,37 @@
+section {
+  padding: 0px;
+  margin-bottom: 5px;
+}
+
+h2 {
+  background-color: #9e38b0;
+  border-bottom: solid 3px #6f277d;
+  color: white;
+  font-style: italic;
+  margin: 0px;
+  padding: 20px;
+}
+
+p {
+  color: #5c5c5c;
+  border: solid 2px #ebebeb;
+  border-top: 0;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  padding: 10px;
+}
+
+h2.active {
+  background-color: #6844b7;
+  border-bottom: solid 4px #4c3185;
+
+}
+
+
+p.active {
+  display: inherit;
+}
+
+p.inactive {
+  display: none
+}

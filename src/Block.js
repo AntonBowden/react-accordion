@@ -1,35 +1,30 @@
 import React, { Component } from 'react';
+import './Block.css';
 
-const styles = {
-  active: {
-    display: 'inherit'
-  },
-  inactive: {
-    display: 'none'
-  }
-}
 
 class Block extends Component {
   constructor() {
     super();
     this.state = {
-      active: true
+      className: 'inactive'
     };
     this.toggle = this.toggle.bind(this);
   }
 
   toggle() {
+    const newState = this.state.className === 'inactive' ? 'active' : 'inactive';
     this.setState({
-      active: !this.state.active
+
+      className: newState
     });
   }
 
   render() {
-    const stateStyle = this.state.active ? styles.active : styles.inactive;
+
     return (
       <section>
-        <h2 onClick={ this.toggle }>{this.props.heading}</h2>
-        <p style={ stateStyle }> {this.props.content} </p>
+        <h2 className={this.state.className} onClick={ this.toggle }>{this.props.heading}</h2>
+        <p className={this.state.className}> {this.props.content} </p>
       </section>
     )
   }
