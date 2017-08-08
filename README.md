@@ -1,6 +1,6 @@
-#React Accordion
+# React Accordion
 
-##Getting started
+## Getting started
 
 Clone the repo and run the following
 
